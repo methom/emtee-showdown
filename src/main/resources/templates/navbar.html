@@ -1,0 +1,56 @@
+{#insert navbar selected}
+<nav class="nav">
+  <ul class="nav-ul">
+    <li><img src="emtee-showdown-icon.png" alt="emtee-showdown logo" /></li>
+    <li {#if selected == "home"}class="nav-selected"{/if}><a href="/index.html">Home</a></li>
+    <li {#if selected == "update"}class="nav-selected"{/if}><a href="/update">Update</a></li>
+    <li {#if selected == "seasons"}class="nav-selected"{/if}><a href="/seasons">Seasons</a></li>
+    <li {#if selected == "selection"}class="nav-selected"{/if}><a href="/selection">Selection</a></li>
+    <li {#if selected == "settings"}class="nav-selected"{/if}><a href="/settings/index.html">Settings</a></li>
+    <li {#if selected == "legal"}class="nav-selected"{/if}><a href="/legal">Legal</a></li>
+  </ul>
+</nav>
+<style>
+  .nav {
+    width: 100%;
+    height: 3rem;
+  }
+  .nav img {
+    padding: 7px 8px;
+    max-height: 34px; /* 3rem (48px|3*16px) - 14px|2*7px */
+  }
+  .nav a {
+    color: white;
+  }
+  .nav-selected a {
+    background-color: #48cbdd;
+  }
+  .nav a:visited {
+    color: white;
+  }
+  .nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    height: 100%;
+  }
+  .nav li {
+    float: left;
+  }
+  .nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .nav a:hover {
+    background-color: #111;
+  }
+  .nav-selected a:hover {
+    background-color: #00A1E2;
+  }
+</style>
+{/insert}

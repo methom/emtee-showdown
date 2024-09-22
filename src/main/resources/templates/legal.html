@@ -18,25 +18,29 @@
     />
 </head>
 <body>
-<div style="margin-bottom: 50px; font-size:xx-large">eMTee Showdown legal information</div>
-<div style="margin-bottom: 50px">
-eMTee Showdown is provided as open source software under the Apache 2.0 license. For more details, please visit the projects <a href="https://github.com/eMTeeWare/emtee-showdown" target="_blank">GitHub repository</a>.
+<div class="top-of-page">
+    {#include navbar /}
 </div>
-<div id="build-info" style="margin-bottom: 50px"></div>
+<div style="margin: .5rem">
+    <div style="margin-bottom: 50px; font-size:xx-large">eMTee Showdown legal information</div>
+    <div style="margin-bottom: 50px">
+    eMTee Showdown is provided as open source software under the Apache 2.0 license. For more details, please visit the projects <a href="https://github.com/eMTeeWare/emtee-showdown" target="_blank">GitHub repository</a>.
+    </div>
+    <div id="build-info" style="margin-bottom: 50px"></div>
 
-<div style="margin-bottom: 50px"><a href="index.html">Back to home.</a></div>
+    <div style="margin-bottom: 50px"><a href="index.html">Back to home.</a></div>
 
-<div style="margin-bottom: 50px">This service uses the following dependencies:</div>
-{#each dependency}
-<div style="margin-bottom: 30px" id="{it.name}">
-    <p id="{it.name}-name" ><a href="{it.projectUrl}" target="_blank" id="{it.name}-url">{it.name}</a></p>
-    <p id="{it.name}-maven">{it.groupId}.{it.artifactId} {it.version}, used under</p><p></p>
-    {#for license in it.licenses}
-        <p style="margin-left: 15px" id="{it.name}-licenses"><a href="{license.url}" target="_blank">{license.name}</a></p>
-    {/for}
+    <div style="margin-bottom: 50px">This service uses the following dependencies:</div>
+    {#each dependency}
+    <div style="margin-bottom: 30px" id="{it.name}">
+        <p id="{it.name}-name" ><a href="{it.projectUrl}" target="_blank" id="{it.name}-url">{it.name}</a></p>
+        <p id="{it.name}-maven">{it.groupId}.{it.artifactId} {it.version}, used under</p><p></p>
+        {#for license in it.licenses}
+            <p style="margin-left: 15px" id="{it.name}-licenses"><a href="{license.url}" target="_blank">{license.name}</a></p>
+        {/for}
+    </div>
+    {/each}
+
 </div>
-{/each}
-
-
 </body>
 </html>

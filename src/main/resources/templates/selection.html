@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>eMTee Showdown - Selection</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="selection.css">
     <link rel="stylesheet" href="/settings/dark-mode.css" />
     <script type="application/javascript" src="selection.js" defer></script>
     <script src="settings/load-settings.js" defer></script>
@@ -15,11 +16,14 @@
     />
 </head>
 <body>
-<div class="flip-random-button-wrapper">
-    <button id="flip-selected-button">✔ Select random</button>
-    <button id="flip-discarded-button">✘ Discard random</button>
+<div class="top-of-page">
+    {#include navbar selected="selection" /}
+    <div class="flip-random-button-wrapper">
+        <button id="flip-selected-button">✔ Select random</button>
+        <button id="flip-discarded-button">✘ Discard random</button>
+    </div>
 </div>
-<div id="selections" style="margin-top: .5rem">
+<div class="selections" id="selections" style="margin-top: .5rem">
     {#each seasons}
     <div class="scene">
         <div id="{it.id}{it_count}" class="card">

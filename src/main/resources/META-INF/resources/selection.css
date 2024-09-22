@@ -1,0 +1,91 @@
+.selections {
+    margin: .5rem;
+}
+
+.scene {
+    border-radius: 10px;
+    width: 350px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    height: 150px;
+    vertical-align: top;
+    min-height: 150px;
+    transition: all .5s ease;
+}
+
+.card {
+    border: 1px dotted black;
+    border-radius: 10px;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card__face {
+    padding: 5px;
+    border-radius: 10px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card__face--front {
+    height: 2.79em;
+    width: 6.8em;
+    position: absolute;
+    background: blue;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 150px;
+}
+
+.card__face--back {
+    color: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+.card__face--back-text {
+    padding: 10px;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card.is-flipped .card__face--front {
+    display: none;
+}
+
+.button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 80px;
+    padding: 15px;
+}
+
+.button-left {
+    float: left;
+}
+
+.button-left:hover {
+    color: green;
+}
+
+.button-right {
+    float: right;
+}
+
+.button-right:hover {
+    color: red;
+}
+
+.flip-random-button-wrapper {
+    padding: 0.5rem;
+    background: white;
+}

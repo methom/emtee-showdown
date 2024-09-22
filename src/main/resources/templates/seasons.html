@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <title>eMTee Showdown - Seasons</title>
+    <link rel="stylesheet" href="seasons.css"/>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="/settings/dark-mode.css" />
     <script type="application/javascript" src="seasons.js" defer></script>
@@ -15,17 +16,20 @@
     />
 </head>
 <body>
-<div class="search-wrapper">
-    <label for="search">Search Seasons:</label>
-    <input type="search" placeholder="Search" class="search" id="search"/>
-    <div class="search-checkboxes">
-        <div>
-            <input type="checkbox" id="hideSelectedCheckbox"/>
-            <label for="hideSelectedCheckbox">Hide Selected</label>
-        </div>
-        <div>
-            <input type="checkbox" id="hideNotSelectedCheckbox"/>
-            <label for="hideNotSelectedCheckbox">Hide Not Selected</label>
+<div class="top-of-page">
+    {#include navbar selected="seasons" /}
+    <div class="search-wrapper">
+        <label for="search">Search Seasons:</label>
+        <input type="search" placeholder="Search" class="search" id="search"/>
+        <div class="search-checkboxes">
+            <div>
+                <input type="checkbox" id="hideSelectedCheckbox"/>
+                <label for="hideSelectedCheckbox">Hide Selected</label>
+            </div>
+            <div>
+                <input type="checkbox" id="hideNotSelectedCheckbox"/>
+                <label for="hideNotSelectedCheckbox">Hide Not Selected</label>
+            </div>
         </div>
     </div>
 </div>
